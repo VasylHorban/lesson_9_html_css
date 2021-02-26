@@ -1,0 +1,80 @@
+body{
+    background-color: #d3d9e6;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 150px)
+    
+}
+h1{
+    text-align: center;
+}
+.pulse-container{
+    display: flex;
+    width: 400px;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center
+}
+.pulse-item{
+    color: #fff;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255, .3);
+    border-radius: 50%;
+   
+}
+
+.pulse-item::after{
+    content: '';
+    width: 20px;
+    display: block;
+    height: 20px;
+    border-radius: inherit;
+    background: currentColor;
+    animation-name: pulse;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    opacity: .4;
+
+}
+@keyframes pulse{
+    to{    
+        transform: scale(2);
+        opacity: .1
+        
+    }
+
+}
+.pulse-item:nth-child(2){
+    background: #ff5050 ;
+    color: #ff5050;  
+}
+.pulse-item:nth-child(3){
+    background:  coral;
+    color: coral;
+   
+}
+.pulse-item:nth-child(4){
+    background: orange;
+   color: orange;
+}
+.pulse-item:nth-child(5){
+    background:#718be2;
+    color: #718be2;
+}
+.pulse-item:nth-child(6){
+    background: rgb(51,284,153);
+   color: #45cc9d;
+}
+.pulse-item:nth-child(7){
+    background: rgb(153,50,204);
+   color: purple;
+}
+.pulse-item:nth-child(8){
+    background: rgb(2,3,2);
+    color: black
+}
